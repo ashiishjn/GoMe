@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile_icon"
+            android:title="Profile"
+            android:onClick="gotoprofile"/>
+
+        <item
+            android:id="@+id/nav_health"
+            android:icon="@drawable/health_icon"
+            android:title="Health"/>
+<!--            android:onClick="gotohealth"-->
+
+
+        <item
+            android:id="@+id/nav_Gratitude"
+            android:icon="@drawable/gratitude_icon"
+            android:title="Gratitude"
+            android:onClick="gotogratitude"/>
+
+        <item
+            android:id="@+id/nav_Strategies"
+            android:icon="@drawable/strategies_icon"
+            android:title="Strategy"
+            android:onClick="gotostrategy"/>
+
+        <item
+            android:id="@+id/nav_contacts"
+            android:icon="@drawable/contacts"
+            android:title="Helpline Numbers"
+            android:onClick="gotocontacts"/>
+
+        <item
+            android:id="@+id/nav_AboutTheDevice"
+            android:icon="@drawable/watch_icon"
+            android:title="About the device"
+            android:onClick="gotowatch"/>
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_arrow_back_black_24dp"
+            android:title="Logout"
+            android:onClick="logout"/>
+    </group>
+
+</menu>

@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/homescreen_background"
+    tools:openDrawer="start">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20">
+
+        <LinearLayout
+            android:id="@+id/HomeLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".nav_home">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:id="@+id/action_bar"
+                android:layout_marginBottom="20dp"
+                android:background="#256D85"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/three_bar_nav_button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginVertical="6dp"
+                    android:onClick="showdrawer"
+                    app:srcCompat="@drawable/ic_three_horizontal_line" />
+                <TextView
+                    android:fontFamily="@font/alegreya"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:text="Home"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginVertical="6dp"
+                    android:onClick="profile"
+                    app:srcCompat="@drawable/logo" />
+            </LinearLayout>
+
+
+            <TextView
+                android:fontFamily="@font/alegreya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="Hello"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:fontFamily="@font/alegreya"
+                android:id="@+id/User_welcome_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="47sp"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/daily_quote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/daily_quote"/>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/daily_update"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/home_screen_card_background"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/alegreya"
+                        android:text="Steps"/>
+
+                    <RelativeLayout
+                        android:id="@+id/progress_layout_steps"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center">
+                        <!--progress bar implementation-->
+                        <ProgressBar
+                            android:id="@+id/progress_bar_steps"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circular_shape"
+                            android:indeterminate="false"
+                            android:progressDrawable="@drawable/circular_progress_bar"
+                            android:textAlignment="center" />
+
+                        <!--Text implementation in center of the progress bar-->
+                        <TextView
+                            android:fontFamily="@font/alegreya"
+                            android:id="@+id/progress_text_steps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="---"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingVertical="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/home_screen_card_background"
+                    android:orientation="vertical">
+                    <TextView
+                        android:fontFamily="@font/alegreya"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:text="Distance"/>
+
+                    <RelativeLayout
+                        android:id="@+id/progress_layout_distance"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center">
+                        <!--progress bar implementation-->
+                        <ProgressBar
+                            android:id="@+id/progress_bar_distance"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circular_shape"
+                            android:indeterminate="false"
+                            android:progressDrawable="@drawable/circular_progress_bar"
+                            android:textAlignment="center" />
+
+                        <!--Text implementation in center of the progress bar-->
+                        <TextView
+                            android:fontFamily="@font/alegreya"
+                            android:id="@+id/progress_text_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            android:text="---"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:background="@drawable/home_screen_card_background"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/heart_icon"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:fontFamily="@font/alegreya"
+                    android:layout_width="90dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="Minimum"/>
+
+                <TextView
+                    android:fontFamily="@font/alegreya"
+                    android:layout_width="80dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="Average"/>
+
+                <TextView
+                    android:fontFamily="@font/alegreya"
+                    android:layout_width="90dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="Maximum"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:fontFamily="@font/alegreya"
+                    android:id="@+id/min_heartRate"
+                    android:layout_width="90dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="--"/>
+
+                <TextView
+                    android:fontFamily="@font/alegreya"
+                    android:id="@+id/average_heartRate"
+                    android:layout_width="80dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="--"/>
+
+                <TextView
+                    android:fontFamily="@font/alegreya"
+                    android:id="@+id/max_heartRate"
+                    android:layout_width="90dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="--"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:fontFamily="@font/alegreya"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="Heart Points:"/>
+
+                <TextView
+                    android:fontFamily="@font/alegreya"
+                    android:id="@+id/display_heart_points"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="0"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:background="@drawable/home_screen_card_background"
+                android:orientation="vertical">
+                <TextView
+                    android:fontFamily="@font/alegreya"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="Daily Sleep"/>
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/sleep"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="100dp"
+                android:layout_marginHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:background="@drawable/home_screen_card_background"
+                android:orientation="vertical">
+                <TextView
+                    android:fontFamily="@font/alegreya"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="Stress Management"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:fontFamily="@font/alegreya"
+                        android:id="@+id/stressdaily"
+                        android:tag="0"
+                        android:onClick="stressManagement"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:padding="5dp"
+                        android:background="@drawable/stress_horizontal_line"
+                        android:text="Daily"/>
+                    <TextView
+                        android:fontFamily="@font/alegreya"
+                        android:id="@+id/stressweekly"
+                        android:tag="1"
+                        android:onClick="stressManagement"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:padding="5dp"
+                        android:text="Weekly"/>
+                    <TextView
+                        android:fontFamily="@font/alegreya"
+                        android:id="@+id/stressmonthly"
+                        android:tag="2"
+                        android:onClick="stressManagement"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:padding="5dp"
+                        android:text="Monthly"/>
+                </LinearLayout>
+                <ImageView
+                    android:layout_marginTop="10dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/stressGrapf"
+                    android:src="@drawable/stress_daily"/>
+                <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:fontFamily="@font/alegreya"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="150dp"
+                    android:gravity="center"
+                    android:textSize="22sp"
+                    android:text="Today's Score"/>
+
+                <RelativeLayout
+                    android:layout_marginLeft="-150dp"
+                    android:id="@+id/progress_layout_stress"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center">
+                    <!--progress bar implementation-->
+                    <ProgressBar
+                        android:id="@+id/progress_bar_stress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/circular_shape"
+                        android:indeterminate="false"
+                        android:progressDrawable="@drawable/circular_progress_bar"
+                        android:textAlignment="center" />
+
+                    <!--Text implementation in center of the progress bar-->
+                    <TextView
+                        android:fontFamily="@font/alegreya"
+                        android:id="@+id/progress_text_stress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="---"
+                        android:textColor="#FFFFFF"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="bottom">
+    <include
+        layout="@layout/bottom_navigation"
+        android:layout_height="70dp"
+        android:layout_width="match_parent"
+        android:gravity="bottom"
+        />
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_home"
+        app:menu="@menu/activity_home_drawer" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="bottom"
+    tools:viewBindingIgnore="true"
+    android:background="@drawable/navigation_line"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_weight="4"
+        android:padding="4dp"
+        android:onClick="SpeechRecognition"
+        android:src="@drawable/voice_recognition"
+        android:id="@+id/SpeechRecognition"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_weight="4"
+        android:padding="4dp"
+        android:onClick="meditation"
+        android:src="@drawable/meditation_icon"
+        android:id="@+id/meditation"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_weight="4"
+        android:padding="4dp"
+        android:onClick="yoga"
+        android:src="@drawable/yoga_icon"
+        android:id="@+id/yoga"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_weight="4"
+        android:padding="4dp"
+        android:onClick="math_game"
+        android:src="@drawable/math_icon"
+        android:id="@+id/math_game"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_weight="4"
+        android:padding="4dp"
+        android:onClick="word_building"
+        android:src="@drawable/word_building"
+        android:id="@+id/word_building"/>
+</LinearLayout>

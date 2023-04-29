@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ContactsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="#256D85"
+        android:layout_marginBottom="10dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="Find therapists near you"
+            android:textSize="25sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:tag="0"
+        android:onClick="Call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEE"
+        android:padding="5dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/face1"
+            android:id="@+id/image1"
+            android:layout_marginRight="15dp"/>
+        <TextView
+            android:id="@+id/name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dr. Andrew"
+            android:layout_toRightOf="@+id/image1"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91 98457 41784"
+            android:layout_toRightOf="@+id/image1"
+            android:layout_below="@+id/name1"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:tag="1"
+        android:onClick="Call"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEE"
+        android:padding="5dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/face2"
+            android:id="@+id/image2"
+            android:layout_marginRight="15dp"/>
+        <TextView
+            android:id="@+id/name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dr. James"
+            android:layout_toRightOf="@+id/image2"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91 95784 41745"
+            android:layout_toRightOf="@+id/image2"
+            android:layout_below="@+id/name2"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl3"
+        android:tag="2"
+        android:onClick="Call"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEE"
+        android:padding="5dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/face3"
+            android:id="@+id/image3"
+            android:layout_marginRight="15dp"/>
+        <TextView
+            android:id="@+id/name3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dr. Emma"
+            android:layout_toRightOf="@+id/image3"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91 87451 87451"
+            android:layout_toRightOf="@+id/image3"
+            android:layout_below="@+id/name3"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl4"
+        android:tag="3"
+        android:onClick="Call"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEE"
+        android:padding="5dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/face4"
+            android:id="@+id/image4"
+            android:layout_marginRight="15dp"/>
+        <TextView
+            android:id="@+id/name4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dr. Sarah"
+            android:layout_toRightOf="@+id/image4"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91 88745 32541"
+            android:layout_toRightOf="@+id/image4"
+            android:layout_below="@+id/name4"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl5"
+        android:tag="4"
+        android:onClick="Call"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEE"
+        android:padding="5dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/face5"
+            android:id="@+id/image5"
+            android:layout_marginRight="15dp"/>
+        <TextView
+            android:id="@+id/name5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dr. Emily"
+            android:layout_toRightOf="@+id/image5"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91 98457 41574"
+            android:layout_toRightOf="@+id/image5"
+            android:layout_below="@+id/name5"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl6"
+        android:tag="5"
+        android:onClick="Call"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EEE"
+        android:padding="5dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/face6"
+            android:id="@+id/image6"
+            android:layout_marginRight="15dp"/>
+        <TextView
+            android:id="@+id/name6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dr. Johnson"
+            android:layout_toRightOf="@+id/image6"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91 87478 32145"
+            android:layout_toRightOf="@+id/image6"
+            android:layout_below="@+id/name6"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

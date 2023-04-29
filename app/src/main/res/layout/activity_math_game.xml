@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/theme_background_extra_light"
+    tools:context=".MathGameActivity">
+
+    <TextView
+        android:id="@+id/questionType"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_margin="30dp"
+        android:textColor="@color/theme_alternate"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:textStyle="bold"
+        android:layout_marginTop="-30dp"
+        android:gravity="center"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/answer"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:textColor="@color/theme_alternate"
+        android:background="@drawable/shapebuttontransparent"/>
+
+    <Button
+        android:id="@+id/Next"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:onClick="Next"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_center_theme"/>
+
+
+</LinearLayout>

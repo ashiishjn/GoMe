@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="15dp"
+    android:background="@color/theme_background_extra_light"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context=".OptionActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Do you want to play some more fun games or do you want to skip to home screen?"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:textColor="@color/theme_alternate"
+        android:textSize="20sp"/>
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center">
+
+        <Button
+            android:layout_marginRight="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play Games"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:onClick="PlayGames"
+            android:textColor="@color/white"
+            android:background="@drawable/shape_center_theme"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HomeScreen"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:onClick="HomeScreen"
+            android:textColor="@color/theme_background"
+            android:background="@drawable/shape_center_transparent_stroke_darktheme"/>
+
+    </LinearLayout>
+
+</LinearLayout>
